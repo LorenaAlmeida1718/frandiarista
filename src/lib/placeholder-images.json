@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "A clean and modern living room, representing a professional cleaning service.",
+      "imageUrl": "https://images.unsplash.com/photo-1507089947368-19c1da9775ae?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjbGVhbiUyMGhvdXNlfGVufDB8fHx8MTc2OTE5NzMxOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "clean house"
+    },
+    {
+      "id": "residential-cleaning",
+      "description": "A bright and tidy living room, showcasing residential cleaning services.",
+      "imageUrl": "https://images.unsplash.com/photo-1612954834248-391b30cf4ad0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxjbGVhbiUyMGxpdmluZyUyMHJvb218ZW58MHx8fHwxNzY5MTg5ODM2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "clean living room"
+    },
+    {
+      "id": "commercial-cleaning",
+      "description": "A clean and organized office space, representing commercial cleaning services.",
+      "imageUrl": "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8Y2xlYW4lMjBvZmZpY2V8ZW58MHx8fHwxNzY5MTk1Mjg3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "clean office"
+    },
+    {
+      "id": "post-construction-cleaning",
+      "description": "A newly constructed room being cleaned, for post-construction cleaning services.",
+      "imageUrl": "https://images.unsplash.com/photo-1617617558346-d157b6ae0aeb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxjb25zdHJ1Y3Rpb24lMjBjbGVhbmluZ3xlbnwwfHx8fDE3NjkxOTczMTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "construction cleaning"
+    }
+  ]
 }

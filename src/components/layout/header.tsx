@@ -1,13 +1,19 @@
 import Link from 'next/link';
+import { Phone } from 'lucide-react';
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-40 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
-        <Link href="/" className="text-2xl font-bold font-headline text-primary">
+    <header className="absolute top-0 z-40 w-full bg-transparent">
+      <div className="container mx-auto flex h-24 items-center justify-between px-4 md:px-6">
+        <Link href="/" className="text-3xl font-bold font-headline text-primary">
           Fran Diarista
         </Link>
-        {/* The WhatsApp button is floating globally. A CTA button could be added here. */}
+        <div className="flex items-center gap-4">
+           <a href="tel:+5562999999999" className="flex items-center gap-2 text-lg font-semibold text-white hover:text-primary transition-colors">
+             <Phone className="h-5 w-5" />
+             <span className="hidden sm:inline">(62) 99999-9999</span>
+           </a>
+        </div>
       </div>
     </header>
   );

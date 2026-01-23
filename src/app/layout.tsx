@@ -4,13 +4,13 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import './globals.css';
 
-const title = 'Fran Diarista em Goiânia | Limpeza Profissional com Confiança';
-const description = 'Serviço de diarista e faxineira em Goiânia para limpeza residencial, comercial e pós-obra. Confiança, qualidade e pontualidade nos Setores Bueno, Marista, Jardim Goiás e Oeste.';
+const title = 'Diarista em Goiânia | Fran Diarista | Limpeza Profissional';
+const description = 'Serviço de diarista e faxineira em Goiânia. Limpeza residencial, comercial e pós-obra com qualidade, confiança e o melhor preço. Peça seu orçamento!';
 
 export const metadata: Metadata = {
   title: title,
   description: description,
-  keywords: ['Diarista em Goiânia', 'Faxineira Goiânia', 'Serviço de limpeza Goiânia', 'Limpeza pós obra Goiânia'],
+  keywords: ['Diarista em Goiânia', 'Faxineira Goiânia', 'Limpeza Profissional Goiânia', 'Limpeza pós obra Goiânia', 'Orçamento limpeza Goiânia'],
   openGraph: {
     title: title,
     description: description,
@@ -57,8 +57,7 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
