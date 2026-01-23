@@ -32,7 +32,7 @@ export default function Differentiators() {
               <div className="flex items-center justify-center h-24 w-24 rounded-full bg-primary mb-6">
                 {item.icon}
               </div>
-              <h3 className="text-2xl font-semibold font-headline text-white">{item.title}</h3>
+              <h3 className="text-2xl font-semibold font-headline text-foreground">{item.title}</h3>
               <p className="mt-2 text-muted-foreground font-body">{item.description}</p>
             </div>
           ))}

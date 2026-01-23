@@ -59,7 +59,7 @@ export default function Services() {
                   <div className="mb-4 inline-block bg-background p-3 rounded-full">
                     {service.icon}
                   </div>
-                <CardTitle className="font-headline text-white text-2xl">{service.title}</CardTitle>
+                <CardTitle className="font-headline text-foreground text-2xl">{service.title}</CardTitle>
                 <CardDescription className="font-body pt-2 text-base">{service.description}</CardDescription>
               </CardContent>
             </Card>
