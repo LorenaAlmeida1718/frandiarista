@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { MessageSquare, Wrench } from 'lucide-react';
 
 const WHATSAPP_LINK = "https://wa.me/5562999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20de%20limpeza.";
 
@@ -15,20 +16,35 @@ export default function Hero() {
         data-ai-hint="clean house"
         priority
       />
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-foreground/70" />
       <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-6">
         <h1 className="text-4xl font-bold tracking-tight uppercase font-headline sm:text-5xl md:text-6xl lg:text-7xl">
           Limpeza Profissional com <span className="text-primary">Confiança e Capricho</span>
         </h1>
-        <p className="mt-6 text-lg leading-8 text-gray-200 font-body max-w-2xl mx-auto">
+        <p className="mt-6 text-lg leading-8 text-gray-100 font-body max-w-2xl mx-auto">
           Atendimento especializado nos bairros Setor Bueno, Marista, Jardim Goiás, Oeste e toda a região de Goiânia.
         </p>
-        <div className="mt-10">
-          <Button asChild size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground font-bold h-14 px-8 text-lg">
-            <Link href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-              Solicitar Orçamento via WhatsApp
-            </Link>
-          </Button>
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Button asChild size="lg" className="font-bold h-14 px-8 text-lg">
+                <Link href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                    <MessageSquare className="h-6 w-6" />
+                    Chamar no WhatsApp
+                </Link>
+            </Button>
+            <Button asChild size="lg" variant="secondary" className="font-bold h-14 px-8 text-lg">
+                <Link href="#services">
+                    <Wrench className="h-6 w-6" />
+                    Ver Nossos Serviços
+                </Link>
+            </Button>
+        </div>
+        <div className="mt-6">
+            <p className="text-base text-gray-100">
+                Precisa de um orçamento?{' '}
+                <Link href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="font-bold underline hover:text-primary">
+                    Fale conosco agora mesmo!
+                </Link>
+            </p>
         </div>
       </div>
     </section>
