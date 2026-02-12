@@ -6,6 +6,7 @@ const painPoints = [
   'paninhos de limpeza esquecidos pela casa',
   'cantos que claramente não foram limpos',
   'aquela sensação constante de que a faxina foi feita correndo e sem capricho',
+  'vidros e espelhos manchados',
 ];
 
 export default function Frustration() {
