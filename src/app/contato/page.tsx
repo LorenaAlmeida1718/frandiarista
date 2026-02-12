@@ -1,6 +1,6 @@
 'use client';
 
-import { Send, MessageSquare } from 'lucide-react';
+import { Send, MessageSquare, Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import WhatsAppButton from '@/components/whatsapp-button';
 import Link from 'next/link';
@@ -135,6 +135,32 @@ export default function ContatoPage() {
                       </Button>
                     </form>
                   </Form>
+                  
+                  <div className="my-8 flex items-center">
+                    <div className="flex-grow border-t border-border"></div>
+                    <span className="flex-shrink mx-4 text-muted-foreground font-body text-sm uppercase">Outras Informações</span>
+                    <div className="flex-grow border-t border-border"></div>
+                  </div>
+
+                  <div className="space-y-4 font-body text-muted-foreground text-center">
+                      <div className="flex items-center gap-3 justify-center">
+                          <Mail className="h-5 w-5 text-primary"/>
+                          <a href="mailto:contato@frandiarista.online" className="hover:text-primary">contato@frandiarista.online</a>
+                      </div>
+                      <div className="flex items-center gap-3 justify-center">
+                          <Phone className="h-5 w-5 text-primary"/>
+                          <span>(62) 99667-8388</span>
+                      </div>
+                      <div className="flex items-center gap-3 justify-center">
+                          <MapPin className="h-5 w-5 text-primary"/>
+                          <span>Setor Urias Magalhães, Goiânia - GO</span>
+                      </div>
+                      <div className="flex items-center gap-3 justify-center">
+                          <Clock className="h-5 w-5 text-primary"/>
+                          <span>Seg. a Sáb. das 8h às 18h</span>
+                      </div>
+                  </div>
+
                 </CardContent>
               </Card>
           </div>
