@@ -1,7 +1,7 @@
 'use client';
 
-import { Phone, Mail, Clock, MapPin, Send } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Send, MessageSquare } from 'lucide-react';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import WhatsAppButton from '@/components/whatsapp-button';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -20,18 +20,16 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
-const WHATSAPP_LINK = "https://wa.me/5562996678388?text=Olá!%20Gostaria%20de%20um%20orçamento%20para%20serviços%20de%20limpeza.";
+const WHATSAPP_NUMBER = "5562996678388";
+const WHATSAPP_LINK_DIRECT = `https://wa.me/${WHATSAPP_NUMBER}?text=Olá!%20Gostaria%20de%20um%20orçamento%20para%20serviços%20de%20limpeza.`;
 
 const formSchema = z.object({
-  name: z.string().min(2, {
-    message: "O nome deve ter pelo menos 2 caracteres.",
+  name: z.string().optional(),
+  phone: z.string().min(10, {
+    message: "Por favor, insira um WhatsApp válido com DDD.",
   }),
-  email: z.string().email({
-    message: "Por favor, insira um e-mail válido.",
-  }),
-  phone: z.string().optional(),
   message: z.string().min(10, {
-    message: "A mensagem precisa ter pelo menos 10 caracteres.",
+    message: "Descreva o serviço que você precisa (mínimo 10 caracteres).",
   }),
 });
 
@@ -42,74 +40,50 @@ export default function ContatoPage() {
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
-      email: "",
       phone: "",
       message: "",
     },
   });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+    const { name, message, phone } = values;
+    const text = `Olá, Fran! Meu nome é ${name || 'Não informado'}. Meu WhatsApp é ${phone}. Gostaria de um orçamento para: ${message}`;
+    const encodedText = encodeURIComponent(text);
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedText}`;
+    
+    window.open(whatsappUrl, '_blank');
+
     toast({
-      title: "Mensagem enviada!",
-      description: "Obrigado por entrar em contato. Retornaremos em breve.",
+      title: "Redirecionando para o WhatsApp...",
+      description: "Sua mensagem está pronta para ser enviada.",
     });
     form.reset();
   }
 
   return (
     <>
-      <main className="bg-background">
+      <main className="bg-secondary">
         <section id="contact-page" className="w-full py-16 md:py-24">
-          <div className="container mx-auto px-4 md:px-6">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <h1 className="text-3xl font-bold font-headline text-foreground sm:text-4xl uppercase">Entre em Contato</h1>
-              <p className="mt-4 text-muted-foreground font-body text-lg">
-                Escolha o melhor canal para falar com a Fran: WhatsApp, e-mail ou o formulário abaixo.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-              <Card className="bg-card border-border shadow-lg">
-                <CardHeader>
-                  <CardTitle className="font-headline text-foreground text-xl">Informações e Acesso Rápido</CardTitle>
+          <div className="container mx-auto px-4 md:px-6 flex justify-center">
+            <Card className="bg-card border-border shadow-lg w-full max-w-2xl">
+                <CardHeader className="text-center p-8">
+                  <h1 className="text-3xl font-bold font-headline text-foreground sm:text-4xl uppercase">Orçamento Rápido e Gratuito</h1>
+                  <p className="mt-2 text-muted-foreground font-body">Envie uma mensagem ou preencha os campos abaixo!</p>
                 </CardHeader>
-                <CardContent className="space-y-4 font-body text-base text-muted-foreground">
-                  <div className="flex items-center gap-4 p-4 bg-secondary rounded-lg">
-                    <Phone className="h-6 w-6 text-primary" />
-                    <div>
-                      <h3 className="font-semibold text-foreground">WhatsApp (Mais rápido)</h3>
-                      <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">(62) 99667-8388</a>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <Mail className="h-6 w-6 text-primary" />
-                    <div>
-                      <h3 className="font-semibold text-foreground">E-mail</h3>
-                      <a href="mailto:contato@frandiarista.online" className="hover:text-primary transition-colors">contato@frandiarista.online</a>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <Clock className="h-6 w-6 text-primary" />
-                    <div>
-                      <h3 className="font-semibold text-foreground">Horário de Atendimento</h3>
-                      <p>Segunda a Sábado, das 8:00 às 18:00</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <MapPin className="h-6 w-6 text-primary" />
-                    <div>
-                      <h3 className="font-semibold text-foreground">Endereço de Referência</h3>
-                      <p>Setor Urias Magalhães, Goiânia - GO</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+                <CardContent className="p-8 pt-0">
+                  <Button asChild className="w-full bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-14">
+                    <Link href={WHATSAPP_LINK_DIRECT} target="_blank" rel="noopener noreferrer">
+                        <MessageSquare className="mr-2 h-6 w-6" />
+                        Chamar no WhatsApp
+                    </Link>
+                  </Button>
 
-              <Card className="bg-card border-border shadow-lg">
-                <CardHeader>
-                  <CardTitle className="font-headline text-foreground text-xl">Ou envie uma mensagem</CardTitle>
-                </CardHeader>
-                <CardContent>
+                  <div className="my-8 flex items-center">
+                    <div className="flex-grow border-t border-border"></div>
+                    <span className="flex-shrink mx-4 text-muted-foreground font-body text-sm uppercase">Ou</span>
+                    <div className="flex-grow border-t border-border"></div>
+                  </div>
+
                   <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 font-body">
                       <FormField
@@ -117,9 +91,9 @@ export default function ContatoPage() {
                         name="name"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Nome</FormLabel>
+                            <FormLabel>Seu Nome (Opcional)</FormLabel>
                             <FormControl>
-                              <Input placeholder="Seu nome completo" {...field} />
+                              <Input placeholder="Ex: João Silva" {...field} />
                             </FormControl>
                             <FormMessage />
                           </FormItem>
@@ -127,23 +101,10 @@ export default function ContatoPage() {
                       />
                       <FormField
                         control={form.control}
-                        name="email"
-                        render={({ field }) => (
-                          <FormItem>
-                            <FormLabel>E-mail</FormLabel>
-                            <FormControl>
-                              <Input placeholder="seu.email@exemplo.com" {...field} />
-                            </FormControl>
-                            <FormMessage />
-                          </FormItem>
-                        )}
-                      />
-                       <FormField
-                        control={form.control}
                         name="phone"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Telefone (Opcional)</FormLabel>
+                            <FormLabel>Seu WhatsApp</FormLabel>
                             <FormControl>
                               <Input placeholder="(62) 99999-9999" {...field} />
                             </FormControl>
@@ -156,10 +117,10 @@ export default function ContatoPage() {
                         name="message"
                         render={({ field }) => (
                           <FormItem>
-                            <FormLabel>Mensagem</FormLabel>
+                            <FormLabel>Qual serviço você precisa?</FormLabel>
                             <FormControl>
                               <Textarea
-                                placeholder="Digite sua dúvida, solicitação de orçamento ou o que mais precisar."
+                                placeholder="Ex: Preciso de uma faxina completa em um apartamento no Setor Bueno."
                                 className="resize-none"
                                 {...field}
                               />
@@ -168,15 +129,14 @@ export default function ContatoPage() {
                           </FormItem>
                         )}
                       />
-                      <Button type="submit" className="w-full font-bold" disabled={form.formState.isSubmitting}>
-                         {form.formState.isSubmitting ? 'Enviando...' : 'Enviar Mensagem'}
-                        <Send className="ml-2 h-4 w-4" />
+                      <Button type="submit" className="w-full font-bold h-14 text-lg bg-foreground hover:bg-foreground/90 text-background" disabled={form.formState.isSubmitting}>
+                         {form.formState.isSubmitting ? 'Enviando...' : 'Solicitar Orçamento via WhatsApp'}
+                        <Send className="ml-2 h-5 w-5" />
                       </Button>
                     </form>
                   </Form>
                 </CardContent>
               </Card>
-            </div>
           </div>
         </section>
       </main>
