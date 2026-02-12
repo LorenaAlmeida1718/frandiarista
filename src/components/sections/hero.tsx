@@ -29,7 +29,7 @@ export default function Hero() {
           Fran Diarista | Faxina residencial e limpeza de apartamentos em Goiânia
         </h2>
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-           <Button asChild size="lg" className="font-bold h-14 px-8 text-lg bg-primary hover:bg-primary/90 text-primary-foreground transform transition-transform duration-300 hover:scale-105">
+           <Button asChild size="lg" className="font-bold h-14 px-8 text-lg bg-green-600 hover:bg-green-700 text-white transform transition-transform duration-300 hover:scale-105">
             <Link href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
               Chamar no WhatsApp
             </Link>
