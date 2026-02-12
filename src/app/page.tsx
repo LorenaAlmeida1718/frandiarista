@@ -21,8 +21,8 @@ export default function Home() {
       <Trust />
       <Testimonials />
       <Neighborhoods />
-      <Faq />
       <FinalCta />
+      <Faq />
       <WhatsAppButton />
     </main>
   );
