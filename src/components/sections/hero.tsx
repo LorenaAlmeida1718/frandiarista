@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
-import { MessageSquare } from 'lucide-react';
+import { MessageSquare, Sparkles } from 'lucide-react';
 
 const WHATSAPP_LINK = "https://wa.me/5562996678388?text=Olá!%20Gostaria%20de%20agendar%20uma%20limpeza.";
 
@@ -36,8 +36,9 @@ export default function Hero() {
               Chamar no WhatsApp
             </Link>
           </Button>
-          <Button asChild size="lg" variant="outline" className="font-bold h-14 px-8 text-lg bg-transparent text-background border-background hover:bg-background/10 transform transition-transform duration-300 hover:scale-105">
+          <Button asChild size="lg" className="font-bold h-14 px-8 text-lg bg-background text-primary-foreground hover:bg-background/90 transform transition-transform duration-300 hover:scale-105">
             <Link href="#services">
+                <Sparkles className="h-6 w-6" />
                 Ver Nossos Serviços
             </Link>
           </Button>
