@@ -16,11 +16,11 @@ export default function Home() {
       <Hero />
       <Introduction />
       <Frustration />
-      <About />
       <Services />
-      <Trust />
-      <Testimonials />
       <Neighborhoods />
+      <Testimonials />
+      <About />
+      <Trust />
       <FinalCta />
       <Faq />
       <WhatsAppButton />
