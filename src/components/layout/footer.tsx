@@ -6,6 +6,7 @@ export default function Footer() {
     <footer className="bg-foreground text-background/80">
       <div className="container mx-auto py-12 px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+          
           <div>
             <h3 className="text-2xl font-bold font-headline text-primary">Fran Diarista</h3>
             <p className="mt-4 text-sm">Serviço de diarista e faxineira em Goiânia e região. Qualidade e confiança para seu lar ou empresa.</p>
@@ -18,7 +19,19 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-          <div className="md:col-span-2 md:justify-self-end">
+          
+          <div>
+            <h3 className="text-lg font-semibold font-headline text-background uppercase tracking-wider">Links Rápidos</h3>
+            <ul className="mt-4 space-y-2 text-sm font-body">
+                <li><Link href="/" className="hover:text-primary transition-colors">Início</Link></li>
+                <li><Link href="/servicos" className="hover:text-primary transition-colors">Serviços</Link></li>
+                <li><Link href="/#about" className="hover:text-primary transition-colors">Sobre</Link></li>
+                <li><Link href="/contato" className="hover:text-primary transition-colors">Contato</Link></li>
+                <li><Link href="/termos-de-uso" className="hover:text-primary transition-colors">Termos de Uso</Link></li>
+            </ul>
+          </div>
+
+          <div>
             <h3 className="text-lg font-semibold font-headline text-background uppercase tracking-wider">Contato</h3>
             <ul className="mt-4 space-y-2 text-sm font-body">
               <li className="flex items-center justify-center md:justify-start gap-3">
