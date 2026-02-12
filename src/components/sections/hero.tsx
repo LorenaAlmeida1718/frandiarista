@@ -29,9 +29,6 @@ export default function Hero() {
         <h2 className="mt-6 text-xl leading-8 text-gray-200 font-body max-w-3xl mx-auto sm:text-2xl">
           Fran Diarista — diarista em Goiânia especializada em faxina residencial, apartamentos e limpeza leve comercial
         </h2>
-        <p className="mt-4 text-base text-gray-300 font-body max-w-2xl mx-auto">
-          Se você procura uma <Link href="/" className="font-semibold text-primary hover:underline">diarista em Goiânia</Link> para cuidar da limpeza da sua casa com atenção, capricho e responsabilidade, a Fran oferece um serviço humano, pontual e feito nos mínimos detalhes — como se estivesse cuidando da própria casa.
-        </p>
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button asChild size="lg" className="font-bold h-14 px-8 text-lg bg-primary hover:bg-primary/90 text-primary-foreground transform transition-transform duration-300 hover:scale-105">
             <Link href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
@@ -45,6 +42,9 @@ export default function Hero() {
             </Link>
           </Button>
         </div>
+        <p className="mt-8 text-lg text-gray-200 font-body max-w-3xl mx-auto">
+          Se você procura uma <Link href="/" className="font-semibold text-primary hover:underline">diarista em Goiânia</Link> para cuidar da limpeza da sua casa com atenção, capricho e responsabilidade, a Fran oferece um serviço humano, pontual e feito nos mínimos detalhes — como se estivesse cuidando da própria casa.
+        </p>
       </div>
     </section>
   );
