@@ -36,7 +36,7 @@ export default function Hero() {
               Chamar no WhatsApp
             </Link>
           </Button>
-          <Button asChild size="lg" className="font-bold h-14 px-8 text-lg bg-background text-primary-foreground hover:bg-background/90 transform transition-transform duration-300 hover:scale-105">
+          <Button asChild size="lg" className="font-bold h-14 px-8 text-lg bg-transparent border border-background text-background hover:bg-background/20 transform transition-transform duration-300 hover:scale-105">
             <Link href="#services">
                 <Sparkles className="h-6 w-6" />
                 Ver Nossos Serviços
