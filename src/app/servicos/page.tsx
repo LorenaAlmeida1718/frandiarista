@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { Metadata } from "next";
 import { Card, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { Sparkles, Building2, Home, CalendarDays, Clock } from "lucide-react";
+import { Sparkles, Building2, Home, CalendarDays, Clock, Truck, PackageOpen, PartyPopper, LayoutGrid } from "lucide-react";
 import WhatsAppButton from "@/components/whatsapp-button";
 
 const services = [
@@ -40,6 +40,30 @@ const services = [
     title: "Limpeza comercial",
     description: "Limpeza de salas, consultórios e pequenos escritórios, com organização, cuidado e discrição.",
     icon: <Building2 className="h-12 w-12 text-primary" />,
+    href: "#",
+  },
+  {
+    title: "Faxina pré-mudança em Goiânia",
+    description: "Limpeza completa do imóvel antes da mudança, deixando tudo limpo, organizado e pronto para receber os móveis.",
+    icon: <Truck className="h-12 w-12 text-primary" />,
+    href: "#",
+  },
+  {
+    title: "Faxina pós-mudança em Goiânia",
+    description: "Limpeza leve após a mudança, focada em remover poeira, sujeira do transporte e organizar o ambiente.",
+    icon: <PackageOpen className="h-12 w-12 text-primary" />,
+    href: "#",
+  },
+  {
+    title: "Faxina leve após eventos em Goiânia",
+    description: "Limpeza leve após pequenas confraternizações, aniversários, reuniões e encontros familiares.",
+    icon: <PartyPopper className="h-12 w-12 text-primary" />,
+    href: "#",
+  },
+  {
+    title: "Organização residencial em Goiânia",
+    description: "Organização básica de quartos, salas, cozinhas e armários para melhorar o espaço, praticidade e conforto do dia a dia.",
+    icon: <LayoutGrid className="h-12 w-12 text-primary" />,
     href: "#",
   },
 ];
