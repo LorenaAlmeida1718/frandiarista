@@ -63,6 +63,9 @@ export default function Footer() {
         </div>
         <div className="mt-10 border-t border-background/10 pt-6 text-center text-xs text-background/60 font-body">
           <p>&copy; {new Date().getFullYear()} Fran Diarista. Todos os direitos reservados.</p>
+          <p className="mt-2">
+            Feito por Lorena Almeida - <a href="https://wa.me/559484276512" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">+55 94 8427-6512</a>
+          </p>
         </div>
       </div>
     </footer>
