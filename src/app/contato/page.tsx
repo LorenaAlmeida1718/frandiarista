@@ -1,18 +1,68 @@
+'use client';
+
 import { Metadata } from 'next';
-import { Phone, Mail, Clock, MapPin } from 'lucide-react';
+import { Phone, Mail, Clock, MapPin, Send } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import WhatsAppButton from '@/components/whatsapp-button';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import * as z from "zod";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { useToast } from "@/hooks/use-toast";
 
 export const metadata: Metadata = {
   title: 'Contato | Fran Diarista em Goiânia',
-  description: 'Entre em contato com a Fran Diarista para agendar sua limpeza em Goiânia. Atendimento via WhatsApp, e-mail. Veja nosso horário e endereço.',
+  description: 'Entre em contato com a Fran Diarista para agendar sua limpeza em Goiânia. Atendimento via WhatsApp, e-mail ou formulário. Veja nosso horário e endereço.',
 };
 
 const WHATSAPP_LINK = "https://wa.me/5562996678388?text=Olá!%20Gostaria%20de%20um%20orçamento%20para%20serviços%20de%20limpeza.";
 
+const formSchema = z.object({
+  name: z.string().min(2, {
+    message: "O nome deve ter pelo menos 2 caracteres.",
+  }),
+  email: z.string().email({
+    message: "Por favor, insira um e-mail válido.",
+  }),
+  phone: z.string().optional(),
+  message: z.string().min(10, {
+    message: "A mensagem precisa ter pelo menos 10 caracteres.",
+  }),
+});
+
 export default function ContatoPage() {
+  const { toast } = useToast();
+
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+    },
+  });
+
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    console.log(values);
+    toast({
+      title: "Mensagem enviada!",
+      description: "Obrigado por entrar em contato. Retornaremos em breve.",
+    });
+    form.reset();
+  }
+
   return (
     <>
       <main className="bg-background">
@@ -21,19 +71,19 @@ export default function ContatoPage() {
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h1 className="text-3xl font-bold font-headline text-foreground sm:text-4xl uppercase">Entre em Contato</h1>
               <p className="mt-4 text-muted-foreground font-body text-lg">
-                Fale com a Fran para tirar suas dúvidas, solicitar um orçamento ou agendar sua faxina.
+                Escolha o melhor canal para falar com a Fran: WhatsApp, e-mail ou o formulário abaixo.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <Card className="bg-card border-border shadow-lg">
                 <CardHeader>
-                  <CardTitle className="font-headline text-foreground text-xl">Informações de Contato</CardTitle>
+                  <CardTitle className="font-headline text-foreground text-xl">Informações e Acesso Rápido</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4 font-body text-base text-muted-foreground">
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-4 p-4 bg-secondary rounded-lg">
                     <Phone className="h-6 w-6 text-primary" />
                     <div>
-                      <h3 className="font-semibold text-foreground">WhatsApp</h3>
+                      <h3 className="font-semibold text-foreground">WhatsApp (Mais rápido)</h3>
                       <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">(62) 99667-8388</a>
                     </div>
                   </div>
@@ -61,15 +111,77 @@ export default function ContatoPage() {
                 </CardContent>
               </Card>
 
-              <div className="flex flex-col items-center justify-center text-center bg-secondary p-8 rounded-lg">
-                  <h2 className="text-2xl font-bold font-headline text-foreground">Pronta para agendar?</h2>
-                  <p className="mt-2 text-muted-foreground font-body">O jeito mais rápido de agendar é pelo WhatsApp. Clique no botão abaixo!</p>
-                   <Button asChild size="lg" className="mt-6 font-bold h-14 px-8 text-lg bg-primary hover:bg-primary/90 text-primary-foreground transform transition-transform duration-300 hover:scale-105">
-                        <Link href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                        Chamar no WhatsApp
-                        </Link>
-                    </Button>
-              </div>
+              <Card className="bg-card border-border shadow-lg">
+                <CardHeader>
+                  <CardTitle className="font-headline text-foreground text-xl">Ou envie uma mensagem</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <Form {...form}>
+                    <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 font-body">
+                      <FormField
+                        control={form.control}
+                        name="name"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Nome</FormLabel>
+                            <FormControl>
+                              <Input placeholder="Seu nome completo" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <FormField
+                        control={form.control}
+                        name="email"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>E-mail</FormLabel>
+                            <FormControl>
+                              <Input placeholder="seu.email@exemplo.com" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                       <FormField
+                        control={form.control}
+                        name="phone"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Telefone (Opcional)</FormLabel>
+                            <FormControl>
+                              <Input placeholder="(62) 99999-9999" {...field} />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <FormField
+                        control={form.control}
+                        name="message"
+                        render={({ field }) => (
+                          <FormItem>
+                            <FormLabel>Mensagem</FormLabel>
+                            <FormControl>
+                              <Textarea
+                                placeholder="Digite sua dúvida, solicitação de orçamento ou o que mais precisar."
+                                className="resize-none"
+                                {...field}
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
+                        )}
+                      />
+                      <Button type="submit" className="w-full font-bold" disabled={form.formState.isSubmitting}>
+                         {form.formState.isSubmitting ? 'Enviando...' : 'Enviar Mensagem'}
+                        <Send className="ml-2 h-4 w-4" />
+                      </Button>
+                    </form>
+                  </Form>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
