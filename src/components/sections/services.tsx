@@ -25,7 +25,7 @@ const services = [
     title: "Diarista por Diária",
     description: "Flexibilidade para sua necessidade. Contrate uma diária e tenha a limpeza resolvida com previsibilidade e confiança.",
     icon: <CalendarDays className="h-12 w-12 text-primary" />,
-    href: "#", // Placeholder
+    href: "/servicos/diarista-por-diaria-goiania",
   },
 ];
 
