@@ -6,15 +6,8 @@ import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import WhatsAppButton from '@/components/whatsapp-button';
 import { CheckCircle, MessageSquare } from 'lucide-react';
-import type { Metadata } from 'next';
 
 const WHATSAPP_LINK = "https://wa.me/5562996678388?text=Olá!%20Gostaria%20de%20saber%20o%20valor%20da%20diária%20e%20agendar%20uma%20limpeza.";
-
-export const metadata: Metadata = {
-  title: 'Diarista por Diária em Goiânia | Valor e Agendamento',
-  description: 'Contrate uma diarista por diária em Goiânia com valor justo e serviço de confiança. Flexibilidade para sua necessidade, seja para casa ou apartamento.',
-  keywords: ['diarista por diária goiânia', 'valor de diária diarista goiânia', 'contratar diarista goiânia', 'diarista avulsa goiânia'],
-};
 
 const serviceIncludes = [
   'Limpeza pontual para quando você mais precisa',

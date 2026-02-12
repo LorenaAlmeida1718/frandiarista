@@ -1,6 +1,5 @@
 'use client';
 
-import { Metadata } from 'next';
 import { Phone, Mail, Clock, MapPin, Send } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import WhatsAppButton from '@/components/whatsapp-button';
@@ -20,11 +19,6 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-
-export const metadata: Metadata = {
-  title: 'Contato | Fran Diarista em Goiânia',
-  description: 'Entre em contato com a Fran Diarista para agendar sua limpeza em Goiânia. Atendimento via WhatsApp, e-mail ou formulário. Veja nosso horário e endereço.',
-};
 
 const WHATSAPP_LINK = "https://wa.me/5562996678388?text=Olá!%20Gostaria%20de%20um%20orçamento%20para%20serviços%20de%20limpeza.";
 

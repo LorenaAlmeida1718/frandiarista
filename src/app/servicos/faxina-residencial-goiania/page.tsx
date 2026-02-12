@@ -6,17 +6,8 @@ import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import WhatsAppButton from '@/components/whatsapp-button';
 import { CheckCircle, MessageSquare, XCircle, ShieldCheck, Star } from 'lucide-react';
-import type { Metadata } from 'next';
 
 const WHATSAPP_LINK = "https://wa.me/5562996678388?text=Olá!%20Quero%20agendar%20minha%20faxina%20residencial%20agora.";
-
-// This metadata is illustrative for a server component.
-// In a real client component, you'd manage the title dynamically if needed.
-export const metadata: Metadata = {
-  title: 'Faxina em Goiânia com Diarista de Confiança | Fran Diarista',
-  description: 'Sua casa limpa, organizada e agradável — sem estresse. Fran é uma diarista em Goiânia especializada em faxina residencial para casas e apartamentos.',
-  keywords: ['faxina em goiânia', 'diarista em goiânia para casa', 'limpeza de casa goiânia', 'faxineira residencial', 'diarista de confiança goiânia'],
-};
 
 const painPoints = [
   'Poeira acumulada nos móveis',
