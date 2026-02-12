@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="bg-foreground text-background/80">
       <div className="container mx-auto py-12 px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-left">
           
           <div>
             <h3 className="text-2xl font-bold font-headline text-primary">Fran Diarista</h3>
@@ -43,16 +43,23 @@ export default function Footer() {
                 <Mail className="h-5 w-5 text-primary"/>
                 <span>contato@frandiarista.online</span>
               </li>
-              <li className="flex items-center justify-center md:justify-start gap-3">
-                <MapPin className="h-5 w-5 text-primary"/>
-                <span>Setor Urias Magalhães, Goiânia - GO</span>
-              </li>
                <li className="flex items-center justify-center md:justify-start gap-3">
                 <Clock className="h-5 w-5 text-primary"/>
                 <span>Seg. a Sáb. das 8h às 18h</span>
               </li>
             </ul>
           </div>
+          
+          <div>
+            <h3 className="text-lg font-semibold font-headline text-background uppercase tracking-wider">Nossa Localização</h3>
+            <ul className="mt-4 space-y-2 text-sm font-body">
+              <li className="flex items-center justify-center md:justify-start gap-3">
+                <MapPin className="h-5 w-5 text-primary"/>
+                <span>Setor Urias Magalhães, Goiânia - GO</span>
+              </li>
+            </ul>
+          </div>
+
         </div>
         <div className="mt-10 border-t border-background/10 pt-6 text-center text-xs text-background/60 font-body">
           <p>&copy; {new Date().getFullYear()} Fran Diarista. Todos os direitos reservados.</p>

@@ -1,6 +1,6 @@
 'use client';
 
-import { Send, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Send, Phone, Mail, Clock } from 'lucide-react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import WhatsAppButton from '@/components/whatsapp-button';
 import { Button } from '@/components/ui/button';
@@ -78,10 +78,6 @@ export default function ContatoPage() {
                       <div className="flex items-center gap-3 justify-center">
                           <Phone className="h-5 w-5 text-primary"/>
                           <span>(62) 99667-8388</span>
-                      </div>
-                      <div className="flex items-center gap-3 justify-center">
-                          <MapPin className="h-5 w-5 text-primary"/>
-                          <span>Setor Urias Magalhães, Goiânia - GO</span>
                       </div>
                       <div className="flex items-center gap-3 justify-center">
                           <Clock className="h-5 w-5 text-primary"/>
