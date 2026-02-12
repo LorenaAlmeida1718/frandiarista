@@ -23,11 +23,14 @@ export default function Neighborhoods() {
     <section id="neighborhoods" className="w-full py-16 md:py-24 bg-secondary">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl font-bold font-headline text-foreground sm:text-4xl uppercase">
-            Atendimento em toda Goiânia e região
-          </h2>
+          <div className="flex justify-center items-center gap-3">
+            <MapPin className="h-8 w-8 text-primary flex-shrink-0"/>
+            <h2 className="text-3xl font-bold font-headline text-foreground sm:text-4xl uppercase">
+              Atendimento em toda Goiânia e região
+            </h2>
+          </div>
           <p className="mt-4 text-muted-foreground font-body text-lg">
-            A Fran atende nos principais bairros de Goiânia, levando um serviço de limpeza de confiança para perto de você.
+            A Fran oferece atendimento de diarista nos principais bairros de Goiânia e região metropolitana, incluindo Setor Bueno, Setor Marista, Jardim Goiás e muitos outros, garantindo pontualidade e um serviço de limpeza de confiança perto de você.
           </p>
         </div>
         <Carousel
