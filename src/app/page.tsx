@@ -8,6 +8,7 @@ import FinalCta from "@/components/sections/final-cta";
 import Introduction from "@/components/sections/introduction";
 import Testimonials from "@/components/sections/testimonials";
 import Neighborhoods from "@/components/sections/neighborhoods";
+import Faq from "@/components/sections/faq";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Trust />
       <Testimonials />
       <Neighborhoods />
+      <Faq />
       <FinalCta />
       <WhatsAppButton />
     </main>
