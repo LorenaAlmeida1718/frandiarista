@@ -4,20 +4,20 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import './globals.css';
 
-const title = 'Diarista em Goiânia | Fran Diarista | Limpeza Profissional';
-const description = 'Serviço de diarista e faxineira em Goiânia. Limpeza residencial, comercial e pós-obra com qualidade, confiança e o melhor preço. Peça seu orçamento!';
+const title = 'Diarista em Goiânia | Fran Diarista | Limpeza Profissional e Faxina';
+const description = 'Serviço de diarista profissional em Goiânia. Faxina residencial e comercial com a confiança que você precisa. Peça seu orçamento de diarista em Goiânia, valor justo e qualidade.';
 
 export const metadata: Metadata = {
   title: title,
   description: description,
-  keywords: ['Diarista em Goiânia', 'Faxineira Goiânia', 'Limpeza Profissional Goiânia', 'Limpeza pós obra Goiânia', 'Orçamento limpeza Goiânia'],
+  keywords: ['Diarista em Goiânia', 'diarista goiania', 'faxineira goiania', 'diarista faxina goiania', 'Serviço de diarista em Goiânia', 'diarista goiania valor', 'limpeza profissional goiania'],
   openGraph: {
     title: title,
     description: description,
     type: 'website',
     locale: 'pt_BR',
     url: 'https://fran-diarista-goiania.web.app', // Placeholder URL
-    siteName: 'Fran Diarista',
+    siteName: 'Fran Diarista Goiânia',
   },
 };
 
@@ -25,7 +25,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Fran Diarista",
-  "description": "Serviços de diarista e limpeza profissional em Goiânia com confiança e capricho. Atendemos limpeza residencial, comercial e pós-obra.",
+  "description": "Serviços de diarista e limpeza profissional em Goiânia. Faxina residencial e comercial. Confiança e profissionalismo para seu lar ou empresa.",
   "telephone": "+5562996678388",
   "address": {
     "@type": "PostalAddress",

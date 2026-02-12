@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
           <div>
             <h3 className="text-2xl font-bold font-headline text-primary">Fran Diarista</h3>
-            <p className="mt-4 text-sm">Sua solução em limpeza profissional em Goiânia.</p>
+            <p className="mt-4 text-sm">Serviço de diarista e faxineira em Goiânia e região. Qualidade e confiança para seu lar ou empresa.</p>
             <div className="flex justify-center md:justify-start items-center space-x-4 mt-4">
               <Link href="#" aria-label="Instagram de Fran Diarista" className="text-background/80 hover:text-primary transition-colors">
                 <Instagram className="h-6 w-6" />
@@ -23,7 +23,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-2 text-sm font-body">
               <li className="flex items-center justify-center md:justify-start gap-3">
                 <Phone className="h-5 w-5 text-primary"/>
-                <span>(62) 99667-8388</span>
+                <span>(62) 99667-8388 (WhatsApp)</span>
               </li>
               <li className="flex items-center justify-center md:justify-start gap-3">
                 <MapPin className="h-5 w-5 text-primary"/>
