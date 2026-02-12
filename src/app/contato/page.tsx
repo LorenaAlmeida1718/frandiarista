@@ -1,6 +1,6 @@
 'use client';
 
-import { Send, Phone, Mail, Clock } from 'lucide-react';
+import { Send, Phone, AtSign, Clock } from 'lucide-react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import WhatsAppButton from '@/components/whatsapp-button';
 import { Button } from '@/components/ui/button';
@@ -72,7 +72,7 @@ export default function ContatoPage() {
                   
                   <div className="space-y-4 font-body text-muted-foreground text-center mb-8">
                       <div className="flex items-center gap-3 justify-center">
-                          <Mail className="h-5 w-5 text-primary"/>
+                          <AtSign className="h-5 w-5 text-primary"/>
                           <a href="mailto:contato@frandiarista.online" className="hover:text-primary">contato@frandiarista.online</a>
                       </div>
                       <div className="flex items-center gap-3 justify-center">

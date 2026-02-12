@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Instagram, Facebook, Phone, MapPin, Mail, Clock } from 'lucide-react';
+import { Instagram, Facebook, Phone, MapPin, AtSign, Clock } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -40,7 +40,7 @@ export default function Footer() {
                 <span>(62) 99667-8388 (WhatsApp)</span>
               </li>
               <li className="flex items-center justify-center md:justify-start gap-3">
-                <Mail className="h-5 w-5 text-primary"/>
+                <AtSign className="h-5 w-5 text-primary"/>
                 <a href="mailto:contato@frandiarista.online" className="hover:text-primary transition-colors">contato@frandiarista.online</a>
               </li>
                <li className="flex items-center justify-center md:justify-start gap-3">
