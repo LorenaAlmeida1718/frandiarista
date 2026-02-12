@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { MessageSquare, Wrench } from 'lucide-react';
+import { Phone, Check } from 'lucide-react';
 
-const WHATSAPP_LINK = "https://wa.me/5562999999999?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20de%20limpeza.";
+const WHATSAPP_LINK = "https://wa.me/5562996678388?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20de%20limpeza.";
 
 export default function Hero() {
   return (
@@ -25,24 +25,23 @@ export default function Hero() {
           Atendimento especializado nos bairros Setor Bueno, Marista, Jardim Goiás, Oeste e toda a região de Goiânia.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Button asChild size="lg" className="font-bold h-14 px-8 text-lg">
-                <Link href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                    <MessageSquare className="h-6 w-6" />
-                    Chamar no WhatsApp
-                </Link>
-            </Button>
-            <Button asChild size="lg" variant="secondary" className="font-bold h-14 px-8 text-lg">
-                <Link href="#services">
-                    <Wrench className="h-6 w-6" />
-                    Ver Nossos Serviços
-                </Link>
-            </Button>
+          <Button asChild size="lg" className="font-bold h-14 px-8 text-lg bg-green-500 hover:bg-green-600">
+            <Link href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+              <Phone className="h-6 w-6" />
+              Solicite um Orçamento
+            </Link>
+          </Button>
+          <Button asChild size="lg" variant="secondary" className="font-bold h-14 px-8 text-lg">
+            <Link href="#services">
+              <Check className="h-6 w-6" />
+              Nossos Serviços
+            </Link>
+          </Button>
         </div>
         <div className="mt-6">
             <p className="text-base text-gray-100">
-                Precisa de um orçamento?{' '}
-                <Link href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="font-bold underline hover:text-primary">
-                    Fale conosco agora mesmo!
+                <Link href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="font-bold hover:text-primary">
+                    <span className="font-normal">Fale conosco pelo WhatsApp:</span> (62) 99667-8388
                 </Link>
             </p>
         </div>

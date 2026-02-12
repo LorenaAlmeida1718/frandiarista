@@ -23,7 +23,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-2 text-sm font-body">
               <li className="flex items-center justify-center md:justify-start gap-3">
                 <Phone className="h-5 w-5 text-primary"/>
-                <span>(62) 99999-9999</span>
+                <span>(62) 99667-8388</span>
               </li>
               <li className="flex items-center justify-center md:justify-start gap-3">
                 <MapPin className="h-5 w-5 text-primary"/>

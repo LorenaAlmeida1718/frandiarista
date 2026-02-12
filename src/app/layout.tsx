@@ -26,7 +26,7 @@ const jsonLd = {
   "@type": "LocalBusiness",
   "name": "Fran Diarista",
   "description": "Serviços de diarista e limpeza profissional em Goiânia com confiança e capricho. Atendemos limpeza residencial, comercial e pós-obra.",
-  "telephone": "+5562999999999", // Placeholder phone number
+  "telephone": "+5562996678388",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Goiânia",

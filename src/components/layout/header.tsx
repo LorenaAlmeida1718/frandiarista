@@ -9,9 +9,9 @@ export default function Header() {
           Fran Diarista
         </Link>
         <div className="flex items-center gap-4">
-           <a href="tel:+5562999999999" className="flex items-center gap-2 text-lg font-semibold text-white hover:text-primary transition-colors">
+           <a href="tel:+5562996678388" className="flex items-center gap-2 text-lg font-semibold text-white hover:text-primary transition-colors">
              <Phone className="h-5 w-5" />
-             <span className="hidden sm:inline">(62) 99999-9999</span>
+             <span className="hidden sm:inline">(62) 99667-8388</span>
            </a>
         </div>
       </div>
