@@ -12,7 +12,7 @@ const points = [
 
 export default function FinalCta() {
   return (
-    <section id="cta" className="w-full py-16 md:py-24 bg-secondary">
+    <section id="contato" className="w-full py-16 md:py-24 bg-secondary">
       <div className="container mx-auto px-4 md:px-6 text-center max-w-3xl">
         <h2 className="text-3xl font-bold font-headline text-foreground sm:text-4xl uppercase">Agende sua faxina com a Fran Diarista</h2>
         <p className="mt-4 text-muted-foreground font-body text-lg">Fale diretamente pelo WhatsApp para:</p>

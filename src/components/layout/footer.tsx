@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Instagram, Facebook, Phone, MapPin } from 'lucide-react';
+import { Instagram, Facebook, Phone, MapPin, Mail, Clock } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -26,8 +26,16 @@ export default function Footer() {
                 <span>(62) 99667-8388 (WhatsApp)</span>
               </li>
               <li className="flex items-center justify-center md:justify-start gap-3">
+                <Mail className="h-5 w-5 text-primary"/>
+                <span>contato@frandiarista.online</span>
+              </li>
+              <li className="flex items-center justify-center md:justify-start gap-3">
                 <MapPin className="h-5 w-5 text-primary"/>
-                <span>Atendimento em toda Goiânia-GO e região.</span>
+                <span>Setor Urias Magalhães, Goiânia - GO</span>
+              </li>
+               <li className="flex items-center justify-center md:justify-start gap-3">
+                <Clock className="h-5 w-5 text-primary"/>
+                <span>Seg. a Sáb. das 8h às 18h</span>
               </li>
             </ul>
           </div>

@@ -18,7 +18,7 @@ const navLinks = [
   { href: "/#about", label: "Sobre" },
   { href: "/#testimonials", label: "Depoimentos" },
   { href: "/#faq", label: "Dúvidas" },
-  { href: "/#cta", label: "Contato" },
+  { href: "/contato", label: "Contato" },
 ];
 
 export default function Header() {
