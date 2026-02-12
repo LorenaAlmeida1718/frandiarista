@@ -23,7 +23,7 @@ export default function Hero() {
       )}
       <div className="absolute inset-0 bg-foreground/80" />
       <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-6">
-        <h1 className="text-4xl font-bold tracking-tight uppercase font-headline sm:text-5xl md:text-6xl">
+        <h1 className="text-3xl font-bold tracking-tight uppercase font-headline sm:text-4xl md:text-5xl">
           Faxina em Goiânia com diarista de confiança: sua casa limpa, organizada e agradável — sem estresse
         </h1>
         <h2 className="mt-6 text-xl leading-8 text-gray-200 font-body max-w-3xl mx-auto sm:text-2xl">
