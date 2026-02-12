@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { MessageSquare } from 'lucide-react';
 
 const WHATSAPP_LINK = "https://wa.me/5562996678388?text=Olá!%20Gostaria%20de%20agendar%20uma%20limpeza.";
 
@@ -31,6 +32,7 @@ export default function Hero() {
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
            <Button asChild size="lg" className="font-bold h-14 px-8 text-lg bg-green-600 hover:bg-green-700 text-white transform transition-transform duration-300 hover:scale-105">
             <Link href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+              <MessageSquare className="h-6 w-6" />
               Chamar no WhatsApp
             </Link>
           </Button>
