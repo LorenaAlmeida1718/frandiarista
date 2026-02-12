@@ -1,9 +1,8 @@
 'use client';
 
-import { Send, MessageSquare, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Send, Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import WhatsAppButton from '@/components/whatsapp-button';
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -21,7 +20,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
 const WHATSAPP_NUMBER = "5562996678388";
-const WHATSAPP_LINK_DIRECT = `https://wa.me/${WHATSAPP_NUMBER}?text=Olá!%20Gostaria%20de%20um%20orçamento%20para%20serviços%20de%20limpeza.`;
 
 const formSchema = z.object({
   name: z.string().optional(),
@@ -68,19 +66,32 @@ export default function ContatoPage() {
             <Card className="bg-card border-border shadow-lg w-full max-w-2xl">
                 <CardHeader className="text-center p-8">
                   <h1 className="text-3xl font-bold font-headline text-foreground sm:text-4xl uppercase">Orçamento Rápido e Gratuito</h1>
-                  <p className="mt-2 text-muted-foreground font-body">Envie uma mensagem ou preencha os campos abaixo!</p>
+                  <p className="mt-2 text-muted-foreground font-body">Prefere preencher seus dados? O formulário monta a mensagem para você. Ou, se preferir, entre em contato direto por um de nossos canais.</p>
                 </CardHeader>
                 <CardContent className="p-8 pt-0">
-                  <Button asChild className="w-full bg-green-600 hover:bg-green-700 text-white font-bold text-lg h-14">
-                    <Link href={WHATSAPP_LINK_DIRECT} target="_blank" rel="noopener noreferrer">
-                        <MessageSquare className="mr-2 h-6 w-6" />
-                        Chamar no WhatsApp
-                    </Link>
-                  </Button>
+                  
+                  <div className="space-y-4 font-body text-muted-foreground text-center mb-8">
+                      <div className="flex items-center gap-3 justify-center">
+                          <Mail className="h-5 w-5 text-primary"/>
+                          <a href="mailto:contato@frandiarista.online" className="hover:text-primary">contato@frandiarista.online</a>
+                      </div>
+                      <div className="flex items-center gap-3 justify-center">
+                          <Phone className="h-5 w-5 text-primary"/>
+                          <span>(62) 99667-8388</span>
+                      </div>
+                      <div className="flex items-center gap-3 justify-center">
+                          <MapPin className="h-5 w-5 text-primary"/>
+                          <span>Setor Urias Magalhães, Goiânia - GO</span>
+                      </div>
+                      <div className="flex items-center gap-3 justify-center">
+                          <Clock className="h-5 w-5 text-primary"/>
+                          <span>Seg. a Sáb. das 8h às 18h</span>
+                      </div>
+                  </div>
 
                   <div className="my-8 flex items-center">
                     <div className="flex-grow border-t border-border"></div>
-                    <span className="flex-shrink mx-4 text-muted-foreground font-body text-sm uppercase">Ou</span>
+                    <span className="flex-shrink mx-4 text-muted-foreground font-body text-sm uppercase">Ou solicite seu orçamento</span>
                     <div className="flex-grow border-t border-border"></div>
                   </div>
 
@@ -136,31 +147,6 @@ export default function ContatoPage() {
                     </form>
                   </Form>
                   
-                  <div className="my-8 flex items-center">
-                    <div className="flex-grow border-t border-border"></div>
-                    <span className="flex-shrink mx-4 text-muted-foreground font-body text-sm uppercase">Outras Informações</span>
-                    <div className="flex-grow border-t border-border"></div>
-                  </div>
-
-                  <div className="space-y-4 font-body text-muted-foreground text-center">
-                      <div className="flex items-center gap-3 justify-center">
-                          <Mail className="h-5 w-5 text-primary"/>
-                          <a href="mailto:contato@frandiarista.online" className="hover:text-primary">contato@frandiarista.online</a>
-                      </div>
-                      <div className="flex items-center gap-3 justify-center">
-                          <Phone className="h-5 w-5 text-primary"/>
-                          <span>(62) 99667-8388</span>
-                      </div>
-                      <div className="flex items-center gap-3 justify-center">
-                          <MapPin className="h-5 w-5 text-primary"/>
-                          <span>Setor Urias Magalhães, Goiânia - GO</span>
-                      </div>
-                      <div className="flex items-center gap-3 justify-center">
-                          <Clock className="h-5 w-5 text-primary"/>
-                          <span>Seg. a Sáb. das 8h às 18h</span>
-                      </div>
-                  </div>
-
                 </CardContent>
               </Card>
           </div>
