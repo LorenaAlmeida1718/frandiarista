@@ -40,7 +40,7 @@ export default function About() {
               ))}
             </ul>
             <blockquote className="mt-6 border-l-4 border-primary pl-4 italic text-foreground/80 font-body text-lg">
-              "Meu maior diferencial é simples: fazer bem-feito, com calma e compromisso, em todas as visitas."
+              "Meu maior diferencial é simples: fazer bem-feito, com praticidade e compromisso, em todas as visitas."
             </blockquote>
           </div>
         </div>
