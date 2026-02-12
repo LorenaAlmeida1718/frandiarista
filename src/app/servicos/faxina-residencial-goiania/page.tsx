@@ -15,15 +15,16 @@ const WHATSAPP_LINK = "https://wa.me/5562996678388?text=Olá!%20Gostaria%20de%20
 export const metadata: Metadata = {
   title: 'Faxina Residencial em Goiânia | Limpeza Detalhada para seu Lar',
   description: 'Serviço profissional de faxina residencial em Goiânia. Deixe sua casa ou apartamento impecável com uma diarista de confiança. Cuidado, organização e sua rotina facilitada.',
-  keywords: ['faxina residencial goiânia', 'diarista para casa', 'limpeza de casa goiânia', 'faxineira residencial'],
+  keywords: ['faxina residencial goiânia', 'diarista para casa', 'limpeza de casa goiânia', 'faxineira residencial', 'diarista em goiânia'],
 };
 
 const serviceIncludes = [
-  'Limpeza de pisos e superfícies',
-  'Higienização de banheiros e cozinha',
-  'Remoção de pó e teias de aranha',
-  'Limpeza de vidros e espelhos (parte interna)',
-  'Organização geral dos ambientes',
+  'Limpeza detalhada de pisos e superfícies',
+  'Higienização completa de banheiros e cozinha',
+  'Remoção de pó, sujeira e teias de aranha',
+  'Limpeza de vidros, janelas e espelhos (parte interna)',
+  'Organização geral para um ambiente mais leve',
+  'Cuidado especial com seus móveis e objetos',
 ];
 
 export default function FaxinaResidencialPage() {
@@ -49,7 +50,7 @@ export default function FaxinaResidencialPage() {
               Faxina Residencial em Goiânia
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-200 font-body max-w-3xl mx-auto">
-              Sua casa limpa e aconchegante com um serviço de limpeza detalhado, realizado por uma diarista de confiança.
+              A tranquilidade de ter seu lar impecável. Serviço de limpeza detalhado e de confiança, para você aproveitar o que realmente importa.
             </p>
             <div className="mt-10">
               <Button asChild size="lg" className="font-bold h-14 px-8 text-lg bg-primary hover:bg-primary/90 text-primary-foreground transform transition-transform duration-300 hover:scale-105">
@@ -66,16 +67,16 @@ export default function FaxinaResidencialPage() {
           <div className="container mx-auto px-4 md:px-6 max-w-4xl">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
-                <h2 className="text-3xl font-bold font-headline text-foreground sm:text-4xl uppercase">Cuidado e Organização Para o Seu Lar</h2>
+                <h2 className="text-3xl font-bold font-headline text-foreground sm:text-4xl uppercase">Cuidado, Organização e Sua Rotina Facilitada</h2>
                 <p className="mt-4 text-muted-foreground font-body text-lg">
-                  O serviço de faxina residencial é a solução perfeita para quem busca praticidade e não abre mão de um ambiente impecável. Com a ajuda de uma <Link href="/" className="text-primary font-semibold hover:underline">diarista em Goiânia</Link> experiente, sua rotina fica mais leve e sua casa muito mais acolhedora.
+                  Imagine chegar em casa e encontrar tudo limpo, cheiroso e organizado, sem ter se preocupado com nada. Com a ajuda de uma <Link href="/" className="text-primary font-semibold hover:underline">diarista em Goiânia</Link> de confiança, sua rotina fica mais leve e seu tempo livre, mais valioso.
                 </p>
                 <p className="mt-4 text-muted-foreground font-body text-lg">
-                  Cada detalhe é pensado para entregar não apenas limpeza, mas uma verdadeira sensação de bem-estar e organização, respeitando seu espaço e suas preferências.
+                  Meu serviço de faxina residencial é pensado para entregar não apenas limpeza, mas um verdadeiro bem-estar, cuidando do seu lar como se fosse o meu.
                 </p>
               </div>
               <div>
-                <h3 className="text-2xl font-bold font-headline text-foreground mb-4">O que está incluso no serviço?</h3>
+                <h3 className="text-2xl font-bold font-headline text-foreground mb-4">O que está incluso na faxina?</h3>
                 <ul className="space-y-3">
                   {serviceIncludes.map((item) => (
                     <li key={item} className="flex items-start">
@@ -87,8 +88,8 @@ export default function FaxinaResidencialPage() {
               </div>
             </div>
             <div className="text-center mt-16">
-              <h3 className="text-2xl font-bold font-headline text-foreground">Pronta para facilitar sua rotina?</h3>
-              <p className="mt-2 text-muted-foreground font-body text-lg">Clique no botão abaixo e fale diretamente comigo para agendar sua faxina!</p>
+              <h3 className="text-2xl font-bold font-headline text-foreground">Sua casa merece esse cuidado.</h3>
+              <p className="mt-2 text-muted-foreground font-body text-lg">Vamos conversar? Clique no botão e fale diretamente comigo para agendar sua faxina.</p>
               <Button asChild size="lg" className="mt-6 font-bold h-14 px-8 text-lg bg-primary hover:bg-primary/90 text-primary-foreground transform transition-transform duration-300 hover:scale-105">
                 <Link href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                   <MessageSquare className="h-6 w-6" />

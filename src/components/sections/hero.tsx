@@ -24,10 +24,10 @@ export default function Hero() {
       <div className="absolute inset-0 bg-foreground/80" />
       <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-6">
         <h1 className="text-4xl font-bold tracking-tight uppercase font-headline sm:text-5xl md:text-6xl lg:text-7xl">
-          SUA CASA OU ESCRITÓRIO LIMPO E ORGANIZADO
+          DIARISTA EM GOIÂNIA: SUA CASA LIMPA E ORGANIZADA
         </h1>
         <p className="mt-6 text-lg leading-8 text-gray-200 font-body max-w-3xl mx-auto">
-          Serviço profissional de diarista em Goiânia para quem busca qualidade, confiança e um ambiente impecável. Deixe a limpeza pesada comigo e aproveite seu tempo.
+          Serviço de diarista profissional e de confiança para quem busca qualidade. Deixe a faxina pesada comigo e aproveite seu tempo com o que realmente importa.
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-4">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
