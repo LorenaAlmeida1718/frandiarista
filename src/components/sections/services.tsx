@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Card, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import { Sparkles, Building2, Home, CalendarDays, Clock } from "lucide-react";
 
 const services = [
@@ -63,6 +64,11 @@ export default function Services() {
               </Card>
             </Link>
           ))}
+        </div>
+        <div className="mt-16 text-center">
+          <Button asChild size="lg" variant="outline" className="font-bold border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+            <Link href="/servicos">Ver todos os serviços</Link>
+          </Button>
         </div>
       </div>
     </section>
