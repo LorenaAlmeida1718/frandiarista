@@ -61,7 +61,7 @@ export default function FaxinaResidencialPage() {
               Faxina em Goiânia com diarista de confiança: sua casa limpa, organizada e agradável — sem estresse
             </h1>
             <div className="mt-10">
-              <Button asChild size="lg" className="font-bold h-14 px-8 text-lg bg-primary hover:bg-primary/90 text-primary-foreground transform transition-transform duration-300 hover:scale-105">
+              <Button asChild size="lg" className="font-bold h-14 px-8 text-lg bg-primary hover:bg-primary/90 text-primary-foreground">
                 <Link href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                   👉 Quero agendar minha faxina agora
                 </Link>
@@ -147,7 +147,7 @@ export default function FaxinaResidencialPage() {
             <div className="text-center border-t border-border pt-12">
               <h3 className="text-2xl font-bold font-headline text-foreground">Agende sua faxina residencial em Goiânia</h3>
               <p className="mt-2 text-muted-foreground font-body text-lg">Fale direto com a Fran pelo WhatsApp para consultar disponibilidade, tirar dúvidas e solicitar seu orçamento.</p>
-              <Button asChild size="lg" className="mt-6 font-bold h-14 px-8 text-lg bg-primary hover:bg-primary/90 text-primary-foreground transform transition-transform duration-300 hover:scale-105">
+              <Button asChild size="lg" className="mt-6 font-bold h-14 px-8 text-lg bg-primary hover:bg-primary/90 text-primary-foreground">
                 <Link href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                   👉 Quero agendar minha faxina agora
                 </Link>

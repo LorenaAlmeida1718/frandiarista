@@ -25,7 +25,7 @@ export default function FinalCta() {
           ))}
         </ul>
         <div className="mt-6">
-          <Button asChild size="lg" className="font-bold h-16 px-10 text-xl bg-primary hover:bg-primary/90 text-primary-foreground transform transition-transform duration-300 hover:scale-105">
+          <Button asChild size="lg" className="font-bold h-16 px-10 text-xl bg-primary hover:bg-primary/90 text-primary-foreground">
             <Link href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
               👉 Quero agendar minha faxina agora
             </Link>
