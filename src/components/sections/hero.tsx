@@ -27,7 +27,7 @@ export default function Hero() {
           Faxina em Goiânia com diarista de confiança: sua casa limpa, organizada e agradável — sem estresse
         </h1>
         <h2 className="mt-6 text-xl leading-8 text-gray-200 font-body max-w-3xl mx-auto sm:text-2xl">
-          Fran Diarista — diarista em Goiânia especializada em faxina residencial, apartamentos e limpeza leve comercial
+          Fran Diarista — diarista em Goiânia especializada em faxina residencial, apartamentos e limpeza comercial
         </h2>
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button asChild size="lg" className="font-bold h-14 px-8 text-lg bg-primary hover:bg-primary/90 text-primary-foreground transform transition-transform duration-300 hover:scale-105">
