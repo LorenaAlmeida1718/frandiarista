@@ -64,7 +64,7 @@ export default function Footer() {
         <div className="mt-10 border-t border-background/10 pt-6 text-center text-xs text-background/60 font-body">
           <p>&copy; {new Date().getFullYear()} Fran Diarista. Todos os direitos reservados.</p>
           <p className="mt-2">
-            Site feito por Lorena Almeida - <a href="https://wa.me/559484276512" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Falar com Lorena</a>
+            Site feito por Lorena Almeida - <a href="https://wa.me/559484276512?text=Ol%C3%A1%2C%20Lorena!%20Vi%20o%20site%20da%20Fran%20Diarista%20e%20gostaria%20de%20saber%20mais%20sobre%20como%20ter%20um%20site%20para%20o%20meu%20neg%C3%B3cio." target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Falar com Lorena</a>
           </p>
         </div>
       </div>
