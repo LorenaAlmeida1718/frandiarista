@@ -1,4 +1,4 @@
-import { Check, Lock, UserCheck, Clock, MessageSquare, Star } from 'lucide-react';
+import { Check, Lock, UserCheck, Clock, MessageSquare, Star, Award } from 'lucide-react';
 
 const securityPoints = [
   { text: 'Comunicação clara', icon: <MessageSquare className="h-6 w-6 text-primary" /> },
@@ -6,6 +6,7 @@ const securityPoints = [
   { text: 'Respeito ao seu espaço', icon: <UserCheck className="h-6 w-6 text-primary" /> },
   { text: 'Cuidado com seus objetos', icon: <Star className="h-6 w-6 text-primary" /> },
   { text: 'Compromisso com horário', icon: <Clock className="h-6 w-6 text-primary" /> },
+  { text: 'Qualidade Garantida', icon: <Award className="h-6 w-6 text-primary" /> },
 ];
 
 const idealFor = [
@@ -26,7 +27,7 @@ export default function Trust() {
           <p className="mt-4 text-muted-foreground font-body text-lg max-w-2xl mx-auto">
             Chamar uma diarista vai muito além da limpeza — envolve confiança. Por isso, a Fran trabalha com:
           </p>
-          <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-6">
             {securityPoints.map((point) => (
               <div key={point.text} className="flex flex-col items-center text-center gap-2">
                 <div className="flex items-center justify-center h-16 w-16 rounded-full bg-background mb-3 shadow-sm">
