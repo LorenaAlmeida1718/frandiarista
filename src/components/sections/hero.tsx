@@ -29,14 +29,14 @@ export default function Hero() {
         <h2 className="mt-6 text-xl leading-8 text-gray-200 font-body max-w-3xl mx-auto sm:text-2xl">
           Fran Diarista | Faxina residencial e limpeza de apartamentos em Goiânia
         </h2>
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-           <Button asChild size="lg" className="font-bold h-14 px-8 text-lg bg-green-600 hover:bg-green-700 text-white transform transition-transform duration-300 hover:scale-105">
+        <div className="mt-10 flex w-full max-w-xs sm:max-w-none sm:w-auto flex-col sm:flex-row items-center justify-center gap-4 mx-auto">
+           <Button asChild size="lg" className="w-full sm:w-auto font-bold h-14 px-8 text-lg bg-green-600 hover:bg-green-700 text-white transform transition-transform duration-300 hover:scale-105">
             <Link href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
               <MessageSquare className="h-6 w-6" />
               Chamar no WhatsApp
             </Link>
           </Button>
-          <Button asChild size="lg" className="font-bold h-14 px-8 text-lg bg-transparent border border-background text-background hover:bg-background/20 transform transition-transform duration-300 hover:scale-105">
+          <Button asChild size="lg" className="w-full sm:w-auto font-bold h-14 px-8 text-lg bg-transparent border border-background text-background hover:bg-background/20 transform transition-transform duration-300 hover:scale-105">
             <Link href="#services">
                 <Sparkles className="h-6 w-6" />
                 Ver Nossos Serviços

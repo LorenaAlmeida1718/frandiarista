@@ -43,7 +43,7 @@ export default function Neighborhoods() {
         >
           <CarouselContent>
             {neighborhoods.map((neighborhood) => (
-              <CarouselItem key={neighborhood} className="basis-1/2 sm:basis-1/3 md:basis-1/4 lg:basis-1/5">
+              <CarouselItem key={neighborhood} className="basis-4/5 sm:basis-1/2 md:basis-1/3 lg:basis-1/5">
                 <div className="p-1">
                   <Card className="bg-card border-border shadow-sm">
                     <CardContent className="p-4 flex flex-col items-center justify-center text-center">
