@@ -1,10 +1,11 @@
 import { XCircle } from 'lucide-react';
 
 const painPoints = [
-  'poeira acumulada',
-  'banheiro pedindo socorro',
-  'cozinha desorganizada',
-  'aquela sensação constante de que a casa nunca está realmente em ordem',
+  'o ralo do banheiro visivelmente sujo',
+  'a geladeira mal limpa, sem tirar nada do lugar',
+  'paninhos de limpeza esquecidos pela casa',
+  'cantos que claramente não foram limpos',
+  'aquela sensação constante de que a faxina foi feita correndo e sem capricho',
 ];
 
 export default function Frustration() {
@@ -24,8 +25,11 @@ export default function Frustration() {
             </div>
           ))}
         </div>
-        <p className="mt-8 text-muted-foreground font-body text-lg">
-          Você até tenta manter tudo sob controle, mas o tempo é curto, o cansaço pesa e a rotina não perdoa. E quando pensa em contratar alguém, vem a insegurança: Será que posso confiar? Será que vai faltar? Será que vai fazer tudo correndo?
+        <p className="mt-8 font-body text-lg text-foreground font-semibold">
+          Você olha… e sabe: não ficou do jeito que deveria.
+        </p>
+        <p className="mt-4 text-muted-foreground font-body text-lg">
+          E é aí que bate aquela frustração: você paga, confia… e mesmo assim sente que precisa refazer parte da limpeza.
         </p>
         <div className="mt-12 border-t border-border pt-12">
             <p className="text-primary font-headline text-xl uppercase tracking-wider">Foi exatamente por isso que nasceu a Fran Diarista.</p>
