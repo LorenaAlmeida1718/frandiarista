@@ -7,8 +7,8 @@ const differentiators = [
     icon: <Clock className="h-10 w-10 text-primary" />,
   },
   {
-    title: "Seus Produtos, Seu Cheirinho",
-    description: "A limpeza é feita com os produtos que você já conhece e ama, garantindo que sua casa fique com o aroma que prefere e evitando alergias.",
+    title: "Cuidado nos Detalhes",
+    description: "Uma limpeza minuciosa que vai além do superficial. Cada canto do seu ambiente recebe a atenção necessária para um resultado impecável.",
     icon: <Sparkles className="h-10 w-10 text-primary" />,
   },
   {
