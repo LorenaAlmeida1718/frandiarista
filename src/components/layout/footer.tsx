@@ -41,7 +41,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center justify-center md:justify-start gap-3">
                 <Mail className="h-5 w-5 text-primary"/>
-                <span>contato@frandiarista.online</span>
+                <a href="mailto:contato@frandiarista.online" className="hover:text-primary transition-colors">contato@frandiarista.online</a>
               </li>
                <li className="flex items-center justify-center md:justify-start gap-3">
                 <Clock className="h-5 w-5 text-primary"/>
