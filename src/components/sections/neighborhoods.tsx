@@ -11,7 +11,7 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 
 const neighborhoods = [
-  'Setor Bueno', 'Setor Marista', 'Jardim Goiás', 'Setor Oeste', 'Setor Sul', 'Jardim América', 'Parque Amazônia', 'Setor Bela Vista', 'Setor Pedro Ludovico', 'Alto da Glória', 'Setor Leste Universitário', 'Jardim Atlântico', 'Setor Nova Suíça', 'Vila Nova', 'Centro', 'Campinas', 'Cidade Jardim', 'Setor Coimbra', 'Setor Negrão de Lima', 'Parque Anhanguera'
+  'Faxina Setor Bueno', 'Faxina Setor Marista', 'Faxina Jardim Goiás', 'Faxina Setor Oeste', 'Faxina Setor Sul', 'Faxina Jardim América', 'Faxina Parque Amazônia', 'Faxina Setor Bela Vista', 'Faxina Setor Pedro Ludovico', 'Faxina Alto da Glória', 'Faxina Setor Leste Universitário', 'Faxina Jardim Atlântico', 'Faxina Setor Nova Suíça', 'Faxina Vila Nova', 'Faxina Centro', 'Faxina Campinas', 'Faxina Cidade Jardim', 'Faxina Setor Coimbra', 'Faxina Setor Negrão de Lima', 'Faxina Parque Anhanguera'
 ];
 
 export default function Neighborhoods() {
