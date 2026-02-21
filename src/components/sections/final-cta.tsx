@@ -7,7 +7,7 @@ const WHATSAPP_LINK = "https://wa.me/5562996678388?text=Olá!%20Gostaria%20de%20
 const points = [
   'Consultar disponibilidade',
   'Tirar dúvidas',
-  'Solicitar orçamento'
+  'Solicitar Orçamento Gratuito'
 ];
 
 export default function FinalCta() {
