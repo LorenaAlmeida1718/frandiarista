@@ -16,6 +16,7 @@ const idealFor = [
   'Para quem valoriza casa limpa e organizada',
   'Para quem busca uma diarista em Goiânia confiável',
   'Para limpeza pré ou pós-mudança',
+  'Para limpeza de escritórios e consultórios',
 ];
 
 export default function Trust() {
