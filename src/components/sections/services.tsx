@@ -36,7 +36,7 @@ const services = [
   },
   {
     title: "Limpeza comercial",
-    description: "Limpeza de salas, consultórios e pequenos escritórios, com organização, cuidado e discrição.",
+    description: "Limpeza de salas, consultórios e escritórios, com organização, cuidado e discrição.",
     icon: <Building2 className="h-12 w-12 text-primary" />,
     href: "#",
   },
