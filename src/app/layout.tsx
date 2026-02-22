@@ -4,8 +4,8 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import './globals.css';
 
-const title = 'Diarista em Goiânia | Fran Diarista | Limpeza Profissional e Faxina';
-const description = 'Serviço de diarista profissional em Goiânia. Faxina residencial e comercial com a confiança que você precisa. Peça seu orçamento de diarista em Goiânia, valor justo e qualidade.';
+const title = 'Diarista e Faxina em Goiânia | Fran Diarista';
+const description = 'Serviço profissional de diarista e faxina em Goiânia para residências e comércios. Confiança, qualidade e preço justo. Solicite seu orçamento!';
 
 export const metadata: Metadata = {
   title: title,
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: description,
     type: 'website',
     locale: 'pt_BR',
-    url: 'https://fran-diarista-goiania.web.app', // Placeholder URL
+    url: 'https://frandiarista.online',
     siteName: 'Fran Diarista Goiânia',
   },
   icons: {
@@ -41,7 +41,7 @@ const jsonLd = {
     "latitude": -16.686891,
     "longitude": -49.264794
   },
-  "url": "https://fran-diarista-goiania.web.app", // Placeholder URL
+  "url": "https://frandiarista.online",
   "serviceArea": [
     {
       "@type": "City",
