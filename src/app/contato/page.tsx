@@ -19,7 +19,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 
-const WHATSAPP_NUMBER = "5562998778752";
+const WHATSAPP_NUMBER = "5562996678388";
 
 const formSchema = z.object({
   name: z.string().optional(),
@@ -77,7 +77,7 @@ export default function ContatoPage() {
                       </div>
                       <div className="flex items-center gap-3 justify-center">
                           <Phone className="h-5 w-5 text-primary"/>
-                          <span>(62) 99877-8752</span>
+                          <span>(62) 99667-8388</span>
                       </div>
                       <div className="flex items-center gap-3 justify-center">
                           <Clock className="h-5 w-5 text-primary"/>

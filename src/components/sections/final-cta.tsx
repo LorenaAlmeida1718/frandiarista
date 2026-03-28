@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Check } from 'lucide-react';
 
-const WHATSAPP_LINK = "https://wa.me/5562998778752?text=Olá!%20Gostaria%20de%20agendar%20minha%20faxina.";
+const WHATSAPP_LINK = "https://wa.me/5562996678388?text=Ol%C3%A1%2C%20Dona%20Fran!%20Vi%20o%20seu%20site%20e%20gostaria%20de%20pedir%20um%20or%C3%A7amento%20para%20uma%20faxina%20em%20Goi%C3%A2nia.%20Como%20funciona%3F";
 
 const points = [
   'Consultar disponibilidade',
