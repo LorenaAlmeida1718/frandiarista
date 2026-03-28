@@ -7,7 +7,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import WhatsAppButton from '@/components/whatsapp-button';
 import { CheckCircle, MessageSquare, XCircle, ShieldCheck, Star } from 'lucide-react';
 
-const WHATSAPP_LINK = "https://wa.me/5562996678388?text=Olá!%20Quero%20agendar%20minha%20faxina%20residencial%20agora.";
+const WHATSAPP_LINK = "https://wa.me/5562998778752?text=Olá!%20Quero%20agendar%20minha%20faxina%20residencial%20agora.";
 
 const painPoints = [
   'Poeira acumulada nos móveis',

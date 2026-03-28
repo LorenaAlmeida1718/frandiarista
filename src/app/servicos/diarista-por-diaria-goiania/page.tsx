@@ -7,7 +7,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import WhatsAppButton from '@/components/whatsapp-button';
 import { CheckCircle, MessageSquare } from 'lucide-react';
 
-const WHATSAPP_LINK = "https://wa.me/5562996678388?text=Olá!%20Gostaria%20de%20saber%20o%20valor%20da%20diária%20e%20agendar%20uma%20limpeza.";
+const WHATSAPP_LINK = "https://wa.me/5562998778752?text=Olá!%20Gostaria%20de%20saber%20o%20valor%20da%20diária%20e%20agendar%20uma%20limpeza.";
 
 const serviceIncludes = [
   'Limpeza pontual para quando você mais precisa',

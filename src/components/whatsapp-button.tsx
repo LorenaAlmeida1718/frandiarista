@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 
-const WHATSAPP_LINK = "https://wa.me/5562996678388?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20de%20limpeza.";
+const WHATSAPP_LINK = "https://wa.me/5562998778752?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20de%20limpeza.";
 
 const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg

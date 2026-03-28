@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Phone } from 'lucide-react';
 
-const WHATSAPP_LINK = "https://wa.me/5562996678388?text=Olá!%20Gostaria%20de%20um%20orçamento%20para%20serviços%20de%20limpeza.";
+const WHATSAPP_LINK = "https://wa.me/5562998778752?text=Olá!%20Gostaria%20de%20um%20orçamento%20para%20serviços%20de%20limpeza.";
 
 const navLinks = [
   { href: "/", label: "Início" },

@@ -29,7 +29,7 @@ const jsonLd = {
   "@type": "LocalBusiness",
   "name": "Fran Diarista",
   "description": "Serviços de diarista e limpeza profissional em Goiânia. Faxina residencial e comercial. Confiança e profissionalismo para seu lar ou empresa.",
-  "telephone": "+5562996678388",
+  "telephone": "+5562998778752",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Goiânia",

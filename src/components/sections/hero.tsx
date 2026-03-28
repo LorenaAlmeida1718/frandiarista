@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { MessageSquare, Sparkles } from 'lucide-react';
 
-const WHATSAPP_LINK = "https://wa.me/5562996678388?text=Olá!%20Gostaria%20de%20agendar%20uma%20limpeza.";
+const WHATSAPP_LINK = "https://wa.me/5562998778752?text=Olá!%20Gostaria%20de%20agendar%20uma%20limpeza.";
 
 export default function Hero() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero-background');
