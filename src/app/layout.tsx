@@ -10,17 +10,20 @@ const description = 'Serviço profissional de diarista e faxina em Goiânia para
 export const metadata: Metadata = {
   title: title,
   description: description,
-  keywords: ['Diarista em Goiânia', 'diarista goiania', 'faxineira goiania', 'diarista faxina goiania', 'Serviço de diarista em Goiânia', 'diarista goiania valor', 'limpeza profissional goiania'],
+  verification: {
+    google: "zVtwxhd7RqHsEwPugqfk_jthFkUuBhmWyBCmGo8PWqc",
+  },
+  keywords: ['Diarista em Goiânia', 'diarista goiania', 'faxineira goiania'],
   openGraph: {
     title: title,
     description: description,
     type: 'website',
     locale: 'pt_BR',
-    url: 'https://frandiarista.online',
-    siteName: 'Fran Diarista Goiânia',
+    url: 'https://frandiarista.com.br',
+    siteName: 'Fran Diarista',
   },
   icons: {
-    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2355C5B9'><path d='M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z'/></svg>",
+    icon: "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💧</text></svg>",
   },
 };
 
