@@ -25,11 +25,19 @@ import Link from 'next/link';
 const WHATSAPP_NUMBER = '5562996678388';
 
 const formSchema = z.object({
-  firstName: z.string()
+  name: z.string()
     .min(2, { message: 'Por favor, insira pelo menos 2 caracteres.' })
-    .max(20, { message: 'O nome deve ter no máximo 20 caracteres.' })
-    .refine((val) => !val.trim().includes(' '), {
-      message: 'Por favor, insira apenas o seu primeiro nome.',
+    .max(30, { message: 'O nome deve ter no máximo 30 caracteres.' })
+    .refine((val) => {
+      const parts = val.trim().split(/\s+/);
+      if (parts.length === 1) return true;
+      if (parts.length === 2) {
+        const second = parts[1].replace(/\.$/, ''); // remove trailing dot if any
+        return second.length === 1;
+      }
+      return false;
+    }, {
+      message: 'Insira o primeiro nome e apenas a inicial do sobrenome (Ex: Maria S. ou Maria S).',
     }),
   sector: z.string()
     .min(3, { message: 'Por favor, insira o nome do setor/bairro.' })
@@ -49,7 +57,7 @@ export default function DepoimentoPage() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      firstName: '',
+      name: '',
       sector: '',
       rating: 5,
       text: '',
@@ -62,7 +70,7 @@ export default function DepoimentoPage() {
     try {
       // 1. Save to LocalStorage
       const newTestimonial = {
-        name: values.firstName,
+        name: values.name,
         location: `${values.sector}, Goiânia`,
         text: values.text,
         rating: values.rating,
@@ -97,7 +105,7 @@ export default function DepoimentoPage() {
     if (!formData) return;
 
     const stars = '⭐'.repeat(formData.rating);
-    const text = `Olá, Fran! Deixei uma avaliação no seu site:\n\n*Nome:* ${formData.firstName}\n*Setor:* ${formData.sector}\n*Avaliação:* ${stars} (${formData.rating}/5)\n*Depoimento:* "${formData.text}"`;
+    const text = `Olá, Fran! Deixei uma avaliação no seu site:\n\n*Nome:* ${formData.name}\n*Setor:* ${formData.sector}\n*Avaliação:* ${stars} (${formData.rating}/5)\n*Depoimento:* "${formData.text}"`;
     const encodedText = encodeURIComponent(text);
     const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedText}`;
 
@@ -120,7 +128,7 @@ export default function DepoimentoPage() {
               <div className="mx-auto w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mb-3">
                 <MessageSquare className="h-6 w-6 text-primary" />
               </div>
-              <CardTitle className="text-2xl font-bold font-headline uppercase tracking-wider text-background animate-pulse">
+              <CardTitle className="text-2xl font-bold font-headline uppercase tracking-wider text-background">
                 Deixe seu Depoimento
               </CardTitle>
               <CardDescription className="text-background/80 font-body text-sm mt-1">
@@ -132,15 +140,15 @@ export default function DepoimentoPage() {
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 font-body">
                   <FormField
                     control={form.control}
-                    name="firstName"
+                    name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-foreground font-semibold">Seu Primeiro Nome</FormLabel>
+                        <FormLabel className="text-foreground font-semibold">Seu Nome</FormLabel>
                         <FormControl>
-                          <Input placeholder="Ex: Maria" {...field} className="h-11 border-border focus-visible:ring-primary" />
+                          <Input placeholder="Ex: Maria S." {...field} className="h-11 border-border focus-visible:ring-primary" />
                         </FormControl>
                         <FormDescription className="text-xs text-muted-foreground">
-                          Digite apenas o seu primeiro nome (sem sobrenome ou espaços).
+                          Digite seu primeiro nome e a inicial do sobrenome (Ex: Maria S. ou Maria S).
                         </FormDescription>
                         <FormMessage />
                       </FormItem>
@@ -239,7 +247,7 @@ export default function DepoimentoPage() {
 
               <div className="p-4 bg-secondary rounded-lg border border-border text-left font-body space-y-2">
                 <div className="flex justify-between items-center">
-                  <span className="font-semibold text-foreground">{formData?.firstName}</span>
+                  <span className="font-semibold text-foreground">{formData?.name}</span>
                   <div className="flex gap-0.5">
                     {[...Array(formData?.rating || 5)].map((_, i) => (
                       <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
