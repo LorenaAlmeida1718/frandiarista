@@ -11,45 +11,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-
-const staticTestimonials = [
-  {
-    name: 'Ana C.',
-    location: 'Setor Bueno, Goiânia',
-    text: 'A Fran é incrível! A casa fica impecável, cheirosa e organizada. É um alívio chegar do trabalho e encontrar tudo arrumado com tanto capricho. Recomendo de olhos fechados!',
-    rating: 5,
-  },
-  {
-    name: 'Carlos F.',
-    location: 'Jardim Goiás, Goiânia',
-    text: 'Contrato a Fran para a limpeza quinzenal do meu apartamento e o serviço é sempre excelente. Pontual, cuidadosa com os móveis e muito profissional. Vale cada centavo.',
-    rating: 5,
-  },
-  {
-    name: 'Mariana L.',
-    location: 'Setor Marista, Goiânia',
-    text: 'Finalmente encontrei uma diarista de confiança em Goiânia. A Fran é discreta, eficiente e deixa tudo brilhando. O banheiro e a cozinha ficam perfeitos!',
-    rating: 5,
-  },
-  {
-    name: 'Ricardo S.',
-    location: 'Parque Amazônia, Goiânia',
-    text: 'A geladeira ficou um brinco, nunca vi tão limpa! A Fran tirou tudo de dentro e organizou. Serviço impecável, sou cliente fiel agora.',
-    rating: 5,
-  },
-  {
-    name: 'Juliana P.',
-    location: 'Setor Oeste, Goiânia',
-    text: 'Chegar em casa e ver tudo organizado, sem bagunça espalhada, não tem preço. A Fran tem um toque especial para arrumação, além da limpeza nota 10.',
-    rating: 5,
-  },
-  {
-    name: 'Fernanda M.',
-    location: 'Alphaville, Goiânia',
-    text: 'Precisava de alguém de confiança para limpar o escritório e a Fran foi super discreta e profissional. Mal notei que ela estava aqui, mas o resultado foi incrível.',
-    rating: 5,
-  },
-];
+import { staticTestimonials } from '@/lib/static-testimonials';
 
 const StarRating = ({ rating }: { rating: number }) => (
   <div className="flex items-center gap-1">
@@ -71,12 +33,15 @@ export default function Testimonials() {
       if (localData) {
         const parsed = JSON.parse(localData);
         if (Array.isArray(parsed) && parsed.length > 0) {
-          const formattedLocal = parsed.map((item: any) => ({
-            name: `${item.name} (Você)` || 'Anônimo',
-            location: item.location || 'Goiânia',
-            text: item.text || '',
-            rating: Number(item.rating) || 5,
-          }));
+          // Filter to only include ratings with 4 and 5 stars for the home page
+          const formattedLocal = parsed
+            .filter((item: any) => Number(item.rating) >= 4)
+            .map((item: any) => ({
+              name: `${item.name} (Você)` || 'Anônimo',
+              location: item.location || 'Goiânia',
+              text: item.text || '',
+              rating: Number(item.rating) || 5,
+            }));
           setAllTestimonials([...formattedLocal, ...staticTestimonials]);
         }
       }
